@@ -415,6 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "J4.Combo-TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -427,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "J4.Combo-TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -503,6 +505,7 @@
 				AE277AF41DBDB69800FCE1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE277AF51DBDB69800FCE1C9 /* Build configuration list for PBXNativeTarget "Combo_TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +514,7 @@
 				AE277AF71DBDB69800FCE1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE277AF81DBDB69800FCE1C9 /* Build configuration list for PBXNativeTarget "Combo_TableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +523,7 @@
 				AE277AFA1DBDB69800FCE1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
