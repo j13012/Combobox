@@ -20,18 +20,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //リストの登録と設定
         table.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        
         table.isHidden = true
         
+        //データソースとデリゲートの登録
         table.dataSource = self
         table.delegate = self
         textField.delegate = self
         
+        //アクション時のターゲットを設定
         button.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchDown)
-        
         listButton.addTarget(self, action: #selector(listButtonTapped(sender:)), for: .touchDown)
         
+        //ビューに追加
         view.addSubview(textField)
         view.addSubview(table)
         view.addSubview(button)
@@ -42,22 +44,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func buttonTapped(sender: UIButton){
         let textResult: String
         
+        //変数にテキストフィールドの値を格納
         textResult = textField.text!
         
+        //アラートの登録と設定
         let alertController: UIAlertController = UIAlertController(title: "結果", message: textResult, preferredStyle: .alert)
         
+        //アラートのボタンの設定
         let OK = UIAlertAction(title: "OK", style: .default){
             action in
             print("OK")
         }
-        
+        //アラートのOKボタンをアクションに追加
         alertController.addAction(OK)
-        
+        //アラートをビューに登録
         present(alertController, animated: true, completion: nil)
     }
     
     //リストビュー表示用関数
     func listButtonTapped(sender: UIButton){
+        //▼を押すごとにリストの表示非表示を設定
         if(buttonFlag == 0){
             table.isHidden = false
             buttonFlag = 1
